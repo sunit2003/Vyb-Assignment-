@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+body {
+  background-color: #222222; /* Set the whole page background to black */
+  margin: 0;
+  padding: 0 70px; /* 50px padding on left and right to create space */
+  font-family: "Urbanist", sans-serif; /* Apply custom font */
+}
+
+/* Ensuring all components inherit the black background */
+@media (max-width: 768px) {
+  body {
+    background-color: #222222; /* Set the whole page background to black */
+    margin: 0;
+    padding: 0 10px; /* 50px padding on left and right to create space */
+    font-family: "Urbanist", sans-serif; /* Apply custom font */
+  }
+}

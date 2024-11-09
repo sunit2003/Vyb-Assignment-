@@ -1,0 +1,90 @@
+.container {
+  margin-top: 50px; /* Adjust this margin to position the section correctly below the hero section */
+  padding: 0 50px;
+  margin-bottom: 80px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 180px;
+  background-color: black;
+  padding: 10px 0;
+  border-radius: 30px; /* Optional: for rounded corners */
+}
+
+.option {
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.option:hover {
+  color: #66bb6a; /* Light green on hover */
+}
+
+.active {
+  color: #66bb6a; /* Green for the active option */
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Position the line just below the option */
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #66bb6a; /* Green line for active option */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 40px;
+    padding: 0 30px;
+    margin-bottom: 60px;
+  }
+
+  .navbar {
+    gap: 100px; /* Reduce gap between options */
+    padding: 8px 0;
+    border-radius: 20px;
+  }
+
+  .option {
+    font-size: 28px;
+    padding: 8px 15px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 30px;
+    padding: 0 15px;
+    margin-bottom: 40px;
+  }
+
+  .navbar {
+    flex-direction: row; /* Stack options vertically */
+    gap: 10px;
+    padding: 10px 5px;
+    border-radius: 15px;
+  }
+
+  .option {
+    font-size: 19px;
+    padding: 6px 10px;
+  }
+
+  .active::after {
+    bottom: -3px; /* Adjust line positioning */
+    height: 3px;
+  }
+}

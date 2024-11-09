@@ -1,0 +1,26 @@
+.heroSection {
+  display: flex;
+  flex-wrap: wrap; /* Allows images to stack on smaller screens */
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.imageContainer {
+  flex: 1;
+  min-width: 300px; /* Ensures images go below one another on small screens */
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Optional: Additional responsiveness */
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    width: 100%; /* Forces stacking on very small screens */
+  }
+}
